@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  monkeycode-register-proxy:
+    image: monkeycode-register-proxy:latest
+    ports:
+      - "82:82"
+    environment:
+      - FLASK_ENV=production
+      - MONKEYCODE_BASE_URL=请替换为实际的MonkeyCode后台URL
+      - MONKEYCODE_USERNAME=admin
+      - MONKEYCODE_PASSWORD=请替换为实际的密码
+      - MONKEYCODE_AUTH_TOKEN=请替换为自定义的认证token
+    restart: always
